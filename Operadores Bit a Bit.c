@@ -78,5 +78,5 @@ void op5(int a, int b) {
 itoa((a>>b),saida,2);		//Converter o resultado
 itoa(a, temp1, 2);		//Converter A
 itoa(b, temp2, 2);		//Converter B
-printf("%d (%08s) << %d (%08s) = %d (%08s)\n", a, temp1, b, temp2, (a>>b), saida);
+printf("%d (%08s) >> %d (%08s) = %d (%08s)\n", a, temp1, b, temp2, (a>>b), saida);
 }
