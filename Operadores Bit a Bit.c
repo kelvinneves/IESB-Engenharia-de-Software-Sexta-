@@ -1,8 +1,6 @@
 #include <stdio.h>
-#include <iostream>
 #include <locale.h> 
 
-using namespace std;
 void op1(int, int);
 void op2(int, int);
 void op3(int, int);
@@ -27,7 +25,7 @@ void banner() {
 	label:
 	printf("\n\nDigite :\n\n");
 	printf("1)OR\n2)AND\n3)XOR\n4)Deslocar para esquerda\n5)Deslocar para a direita\n\nEntrada: ");
-	entrada = cin.get();
+	scanf("%c", &entrada);
 	if (entrada == '1') {
 		op1(valor1, valor2);
 	} else if ( entrada == '2') {
