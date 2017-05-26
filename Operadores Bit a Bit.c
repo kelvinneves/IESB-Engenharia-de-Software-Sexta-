@@ -8,7 +8,9 @@ void op4(int, int);
 void op5(int, int);
 void banner();
 
-char entrada;
+char entrada, temp3;
+char saida[32], temp1[32], temp2[32];
+int id;
 
 int main() {
 setlocale(LC_ALL, "Portuguese");
@@ -26,44 +28,55 @@ void banner() {
 	printf("\n\nDigite :\n\n");
 	printf("1)OR\n2)AND\n3)XOR\n4)Deslocar para esquerda\n5)Deslocar para a direita\n\nEntrada: ");
 	scanf("%c", &entrada);
-	if (entrada == '1') {
-		op1(valor1, valor2);
-	} else if ( entrada == '2') {
-		op2(valor1, valor2);
-	} else if ( entrada == '3') {
-		op3(valor1, valor2);
-	} else if ( entrada == '4') {
-		op4(valor1, valor2);
-	} else if ( entrada == '5') {
-		op5(valor1, valor2);
-	} else {
-		system("cls");
-		printf("Entrada não encontrada\nTente novamente\n\n");
-		goto label;
-	}
+	system("cls");
+		if (entrada == '1') {
+			op1(valor1, valor2);
+		} else if ( entrada == '2') {
+			op2(valor1, valor2);
+		} else if ( entrada == '3') {
+			op3(valor1, valor2);
+		} else if ( entrada == '4') {
+			op4(valor1, valor2);
+		} else if ( entrada == '5') {
+			op5(valor1, valor2);
+		} else {
+			system("cls");
+			printf("Entrada não encontrada\nTente novamente\n\n");
+			goto label;
+		}
 }
 
 void op1(int a, int b) {
-system("cls");
-printf("Resultado entre %d | %d = %d\n", a, b, (a|b));
+itoa((a|b),saida,2);		//Converter o resultado
+itoa(a, temp1, 2);		//Converter A
+itoa(b, temp2, 2);		//Converter B
+printf("%d (%08s) OR %d (%08s) = %d (%08s)\n", a, temp1, b, temp2, (a|b), saida);
 }
 
 void op2(int a, int b) {
-system("cls");
-printf("Resultado entre %d & %d = %d\n", a, b, (a&b));
+itoa((a&b),saida,2);		//Converter o resultado
+itoa(a, temp1, 2);		//Converter A
+itoa(b, temp2, 2);		//Converter B
+printf("%d (%08s) AND %d (%08s) = %d (%08s)\n", a, temp1, b, temp2, (a&b), saida);
 }
 
 void op3(int a, int b) {
-system("cls");
-printf("Resultado entre %d xor %d = %d\n", a, b, (a^b));
+itoa((a^b),saida,2);		//Converter o resultado
+itoa(a, temp1, 2);		//Converter A
+itoa(b, temp2, 2);		//Converter B
+printf("%d (%08s) XOR %d (%08s) = %d (%08s)\n", a, temp1, b, temp2, (a^b), saida);
 }
 
 void op4(int a, int b) {
-system("cls");
-printf("Resultado entre %d << %d = %d\n", a, b, (a<<b));
+itoa((a<<b),saida,2);		//Converter o resultado
+itoa(a, temp1, 2);		//Converter A
+itoa(b, temp2, 2);		//Converter B
+printf("%d (%08s) << %d (%08s) = %d (%08s)\n", a, temp1, b, temp2, (a<<b), saida);
 }
 
 void op5(int a, int b) {
-system("cls");
-printf("Resultado entre %d >> %d = %d\n", a, b, (a>>b));
+itoa((a>>b),saida,2);		//Converter o resultado
+itoa(a, temp1, 2);		//Converter A
+itoa(b, temp2, 2);		//Converter B
+printf("%d (%08s) << %d (%08s) = %d (%08s)\n", a, temp1, b, temp2, (a>>b), saida);
 }
