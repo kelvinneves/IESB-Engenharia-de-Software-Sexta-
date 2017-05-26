@@ -60,10 +60,10 @@ printf("Resultado entre %d xor %d = %d\n", a, b, (a^b));
 
 void op4(int a, int b) {
 system("cls");
-printf("Resultado entre %d & %d = %d\n", a, b, (a<<b));
+printf("Resultado entre %d << %d = %d\n", a, b, (a<<b));
 }
 
 void op5(int a, int b) {
 system("cls");
-printf("Resultado entre %d & %d = %d\n", a, b, (a>>b));
+printf("Resultado entre %d >> %d = %d\n", a, b, (a>>b));
 }
