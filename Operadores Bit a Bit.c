@@ -8,9 +8,8 @@ void op4(int, int);
 void op5(int, int);
 void banner();
 
-char entrada, temp3;
-char saida[32], temp1[32], temp2[32];
-int id;
+char entrada;
+char saida[32], temp1[32], temp2[32], temp3[32];
 
 int main() {
 setlocale(LC_ALL, "Portuguese");
@@ -47,36 +46,36 @@ void banner() {
 }
 
 void op1(int a, int b) {
-itoa((a|b),saida,2);		//Converter o resultado
-itoa(a, temp1, 2);		//Converter A
-itoa(b, temp2, 2);		//Converter B
+itoa((a|b),saida,2);		//Converter o resultado para binário
+itoa(a, temp1, 2);		//Converter A para binário
+itoa(b, temp2, 2);		//Converter B para binário
 printf("%d (%08s) OR %d (%08s) = %d (%08s)\n", a, temp1, b, temp2, (a|b), saida);
 }
 
 void op2(int a, int b) {
-itoa((a&b),saida,2);		//Converter o resultado
-itoa(a, temp1, 2);		//Converter A
-itoa(b, temp2, 2);		//Converter B
+itoa((a&b),saida,2);		//Converter o resultado para binário
+itoa(a, temp1, 2);		//Converter A para binário
+itoa(b, temp2, 2);		//Converter B para binário
 printf("%d (%08s) AND %d (%08s) = %d (%08s)\n", a, temp1, b, temp2, (a&b), saida);
 }
 
 void op3(int a, int b) {
 itoa((a^b),saida,2);		//Converter o resultado
-itoa(a, temp1, 2);		//Converter A
-itoa(b, temp2, 2);		//Converter B
+itoa(a, temp1, 2);		//Converter A para binário
+itoa(b, temp2, 2);		//Converter B para binário
 printf("%d (%08s) XOR %d (%08s) = %d (%08s)\n", a, temp1, b, temp2, (a^b), saida);
 }
 
 void op4(int a, int b) {
-itoa((a<<b),saida,2);		//Converter o resultado
-itoa(a, temp1, 2);		//Converter A
-itoa(b, temp2, 2);		//Converter B
+itoa((a<<b),saida,2);		//Converter o resultado para binário
+itoa(a, temp1, 2);		//Converter A para binário
+itoa(b, temp2, 2);		//Converter B para binário
 printf("%d (%08s) << %d (%08s) = %d (%08s)\n", a, temp1, b, temp2, (a<<b), saida);
 }
 
 void op5(int a, int b) {
-itoa((a>>b),saida,2);		//Converter o resultado
-itoa(a, temp1, 2);		//Converter A
-itoa(b, temp2, 2);		//Converter B
+itoa((a>>b),saida,2);		//Converter o resultado para binário
+itoa(a, temp1, 2);		//Converter A para binário
+itoa(b, temp2, 2);		//Converter B para binário
 printf("%d (%08s) >> %d (%08s) = %d (%08s)\n", a, temp1, b, temp2, (a>>b), saida);
 }
